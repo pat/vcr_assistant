@@ -42,13 +42,13 @@ end
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vcr_assistant', '~> 0.1.1', :group => :test
+gem 'vcr_assistant', '~> 0.2.0', :group => :test
 ```
 
 To have the `assisted_cassette` helper to be available in all specs, you can require `'vcr_assistant/rspec'` either in your Gemfile:
 
 ```ruby
-gem 'vcr_assistant', '~> 0.1.0',
+gem 'vcr_assistant', '~> 0.2.0',
   :group   => :test,
   :require => 'vcr_assistant/rspec'
 ```
