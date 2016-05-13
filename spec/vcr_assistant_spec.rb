@@ -26,10 +26,26 @@ describe VCRAssistant do
 
   it 'automatically names the VCR cassette' do |example|
     expect(VCR).to receive(:use_cassette).with(
-      'vcr_assistant/automatically_names_the_vcr_cassette'
+      'vcr_assistant/automatically_names_the_vcr_cassette', {}
     )
 
     assisted_cassette(example) { |assistant| }
+  end
+
+  it 'accepts options for the cassette' do |example|
+    expect(VCR).to receive(:use_cassette).with(
+      'vcr_assistant/accepts_options_for_the_cassette', :setting => true
+    )
+
+    assisted_cassette(example, :default, :setting => true) { |assistant| }
+  end
+
+  it 'accepts options without a label' do |example|
+    expect(VCR).to receive(:use_cassette).with(
+      'vcr_assistant/accepts_options_without_a_label', :setting => true
+    )
+
+    assisted_cassette(example, :setting => true) { |assistant| }
   end
 
   it 'can fire a setup block' do |example|

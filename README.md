@@ -83,6 +83,19 @@ it 'should make external HTTP calls' do |example|
 end
 ```
 
+You can also pass through options for that specific VCR call as the last argument in both `assisted_cassette` and `VCRAssistant::Cassette.call`:
+
+```ruby
+assisted_cassette example, :record => :new_episodes do |assistant|
+  # ...
+end
+
+# or, if specifying a label:
+assisted_cassette example, :default, :record => :new_episodes do |assistant|
+  # ...
+end
+```
+
 ### Custom assistants
 
 A standard assistant won't do anything much - you'll just get the advantage of automatically named cassettes. To have a custom assistant, you need to change the value of `VCRAssistant.assistant` to something that responds to `call` - perhaps a Proc or lambda - and then returns an object.
