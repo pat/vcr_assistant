@@ -26,7 +26,7 @@ describe VCRAssistant do
 
   it 'automatically names the VCR cassette' do |example|
     expect(VCR).to receive(:use_cassette).with(
-      'vcr_assistant/automatically_names_the_vcr_cassette', {}
+      'vcr_assistant/vcrassistant_automatically_names_the_vcr_cassette', {}
     )
 
     assisted_cassette(example) { |assistant| }
@@ -34,7 +34,8 @@ describe VCRAssistant do
 
   it 'accepts options for the cassette' do |example|
     expect(VCR).to receive(:use_cassette).with(
-      'vcr_assistant/accepts_options_for_the_cassette', :setting => true
+      'vcr_assistant/vcrassistant_accepts_options_for_the_cassette',
+      :setting => true
     )
 
     assisted_cassette(example, :default, :setting => true) { |assistant| }
@@ -42,7 +43,8 @@ describe VCRAssistant do
 
   it 'accepts options without a label' do |example|
     expect(VCR).to receive(:use_cassette).with(
-      'vcr_assistant/accepts_options_without_a_label', :setting => true
+      'vcr_assistant/vcrassistant_accepts_options_without_a_label',
+      :setting => true
     )
 
     assisted_cassette(example, :setting => true) { |assistant| }
