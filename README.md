@@ -37,6 +37,12 @@ it 'automatically clears Stripe before tests' do |example|
 end
 ```
 
+## Upgrading
+
+### From 0.x to 1.0.0
+
+In 0.x releases, the VCR cassette file names did not use the example's full description, which could lead to overwritten specs when the same short description is used in different contexts. File names now use the full description instead - so, you will need to rename your cassette files accordingly.
+
 ## Installation
 
 Add this line to your application's Gemfile:
