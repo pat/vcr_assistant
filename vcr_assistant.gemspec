@@ -1,7 +1,7 @@
 # coding: utf-8
 Gem::Specification.new do |spec|
   spec.name          = "vcr_assistant"
-  spec.version       = "0.2.0"
+  spec.version       = "1.0.0"
   spec.authors       = ["Pat Allan"]
   spec.email         = ["pat@freelancing-gods.com"]
 
