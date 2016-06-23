@@ -16,7 +16,7 @@ class VCRAssistant::FileName
   attr_reader :example
 
   def file
-    example.metadata[:description].downcase.gsub(/\s+/, '_').gsub(/[\W]+/, '')
+    example.metadata[:full_description].downcase.gsub(/\s+/, '_').gsub(/[\W]+/, '')
   end
 
   def folder
