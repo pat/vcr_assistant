@@ -48,13 +48,13 @@ In 0.x releases, the VCR cassette file names did not use the example's full desc
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vcr_assistant', '~> 1.0.0', :group => :test
+gem 'vcr_assistant', '~> 1.0.1', :group => :test
 ```
 
 To have the `assisted_cassette` helper to be available in all specs, you can require `'vcr_assistant/rspec'` either in your Gemfile:
 
 ```ruby
-gem 'vcr_assistant', '~> 1.0.0',
+gem 'vcr_assistant', '~> 1.0.1',
   :group   => :test,
   :require => 'vcr_assistant/rspec'
 ```
